@@ -10,6 +10,7 @@ const workspaceRoutes = createWorkspaceRouteRecords({
   dashboard: () => import('@/pages/Dashboard.vue'),
   flowRuns: () => import('@/pages/FlowRuns.vue'),
   flowRun: () => import('@/pages/FlowRun.vue'),
+  taskRuns: () => import('@/pages/TaskRuns.vue'),
   taskRun: () => import('@/pages/TaskRun.vue'),
   flows: () => import('@/pages/Flows.vue'),
   flow: () => import('@/pages/Flow.vue'),
@@ -53,11 +54,6 @@ const routeRecords: AppRouteRecord[] = [
     name: 'settings',
     path: '/settings',
     component: (): RouteComponent => import('@/pages/Settings.vue'),
-  },
-  {
-    name: 'taskRuns',
-    path: '/task-runs',
-    component: (): RouteComponent => import('@/pages/TaskRuns.vue'),
   },
   {
     path: '/:pathMatch(.*)*',

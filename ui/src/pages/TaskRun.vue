@@ -70,7 +70,16 @@
     return taskRun.value?.taskInputs ? JSON.stringify(taskRun.value.taskInputs, undefined, 2) : '{}'
   })
 
+  function goToTaskRuns(): void {
+    router.push(routes.taskRuns())
+  }
+
   function goToFlowRun(): void {
+    if (!flowRunId.value) {
+      goToTaskRuns()
+      return
+    }
+
     flowRunDetailsSubscription.refresh()
     router.push(routes.flowRun(flowRunId.value!))
   }
