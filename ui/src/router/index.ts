@@ -54,7 +54,11 @@ const routeRecords: AppRouteRecord[] = [
     path: '/settings',
     component: (): RouteComponent => import('@/pages/Settings.vue'),
   },
-
+  {
+    name: 'tasks',
+    path: '/tasks',
+    component: (): RouteComponent => import('@/pages/Tasks.vue'),
+  },
   {
     path: '/:pathMatch(.*)*',
     name: '404',
