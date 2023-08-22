@@ -55,9 +55,9 @@ const routeRecords: AppRouteRecord[] = [
     component: (): RouteComponent => import('@/pages/Settings.vue'),
   },
   {
-    name: 'tasks',
-    path: '/tasks',
-    component: (): RouteComponent => import('@/pages/Tasks.vue'),
+    name: 'taskRuns',
+    path: '/task-runs',
+    component: (): RouteComponent => import('@/pages/TaskRuns.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
